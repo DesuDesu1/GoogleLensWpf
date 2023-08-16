@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="GoogleLensWpf.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GoogleLensWpf.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/menuButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel Margin="0 35 0 0">
+        <CheckBox Content="Monitor Clipboard"
+                  Foreground="Black"
+                  IsChecked="{Binding MonitorClipboard}"
+                  HorizontalAlignment="Left"
+                  VerticalContentAlignment="Center"
+                  Style="{StaticResource menuCheckbox}" 
+                  Width="300"/>
+        <CheckBox Content="Paste Result in Clipboard"
+                  Foreground ="Black"
+                  IsChecked="{Binding SetResultInClipboard}"
+                  HorizontalAlignment="Left"
+                  VerticalContentAlignment="Center"
+                  Style="{StaticResource menuCheckbox}"
+                  Width="300"/>
+        <Button Style="{StaticResource menuButton}"
+                HorizontalAlignment="Left"
+                Width="300"
+                Command="{Binding LoadImageFromFileCommand}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Image Source="../Images/File.ico"
+                       Style="{StaticResource menuButtonIcon}"/>
+                <TextBlock Text="Open File" Foreground="Black" TextDecorations="{x:Null}"/>
+            </StackPanel>
+        </Button>
+        <TextBlock TextWrapping="Wrap" Margin="40, 10, 0, 0" HorizontalAlignment="Left" Foreground="Red" FontSize="15" Text="{Binding ErrorMessage}" Width="300"/>
+        <TextBlock TextWrapping="Wrap" Margin="40, 5, 0, 0" HorizontalAlignment="Left" FontSize="15"  Text="{Binding StatusMessage}" Width="300"/>
+    </StackPanel>
+</UserControl>
