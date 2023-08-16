@@ -1,6 +1,4 @@
 # GoogleLensWpf
-This is a simple WPF projects that uses Google Lens as an API for OCR.
-I would recommend to use it with Windows Snipping Tool or Lightshot, it can also perform OCR on images from your files. 
+This WPF project uses the Google Lens for OCR. It supports OCR on screenshots taken with tools like Windows Snipping Tool or Lightshot, as well as on images from local files.
 
-Это простой WPF проект, в качестве OCR используется Google Lens.
-Лучше всего использовать его с ножницами Windows или Lightshot, он также может выполнять распознавание изображений из файлов.
+Этот WPF проект использует API Google Lens для оптического распознавания символов. Он поддерживает OCR на снимках экрана, сделанных с помощью инструментов, таких как Ножницы Windows или Lightshot, а также на изображениях из локальных файлов.
